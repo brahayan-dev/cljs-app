@@ -1,0 +1,13 @@
+{:source-paths
+ ["source"]
+
+ :dependencies
+ [[reagent "1.0.0"]
+  [cljs-http "0.1.46"]
+  [org.clojure/core.async "1.3.610"]]
+
+ :dev-http {8080 "public"}
+ :builds
+ {:app {:target :browser
+        :modules {:main {:init-fn app.core/main}}
+        :dev {:compiler-options {:output-feature-set :es6}}}}}
