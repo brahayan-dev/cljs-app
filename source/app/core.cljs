@@ -1,9 +1,6 @@
 (ns app.core
-  (:require
-   [reagent.dom :as rdom]))
+  (:require [reagent.dom :as dom]
+            [app.views.index :as index]))
 
-(defn app []
-  [:h1 "App is working!"])
-
-(defn ^:export main []
-  (rdom/render [app] (js/document.getElementById "app")))
+(defn ^:export ^:dev/after-load main []
+  (dom/render [index/view] (js/document.getElementById "app")))

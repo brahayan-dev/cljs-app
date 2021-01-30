@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "shadow-cljs watch app",
+    "serve": "rm -r ./public/js ; shadow-cljs watch app",
     "build": "rm -r ./public/js ; shadow-cljs release app"
   },
   "devDependencies": {
